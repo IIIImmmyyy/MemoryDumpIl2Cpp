@@ -59,6 +59,28 @@ let s_GlobalMetadataHeader=0XC1D130
 let s_Il2CppMetadataRegistration=0XC1D100
 let s_Il2CppCodeRegistration= 0XC1D0F8
 ```
+#### 获得il2cppso的句柄
+```
+let dlopen = Module.findExportByName(null,"dlopen");
+    if (dlopen != null) {
+        Interceptor.attach(dlopen, {
+            onEnter: function (args) {
+                let path = args[0].readCString();
+                if (path.indexOf(soName) !== -1) {
+                    this.hook = true;
+                }
+              
+            },
+            onLeave: function (retval) {
+                if (this.hook) {
+                        il2cppHandler = new NativePointer(s);
+
+                }
+            }
+        })
+    }
+```
+
 #### 加载SO 并且运行
 ```
 let module = Process.findModuleByName('libil2cpp.so');
