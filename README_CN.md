@@ -59,7 +59,7 @@ let s_GlobalMetadataHeader=0XC1D130
 let s_Il2CppMetadataRegistration=0XC1D100
 let s_Il2CppCodeRegistration= 0XC1D0F8
 ```
-#### 获得il2cppso的句柄
+#### 获得il2cppso的句柄`
 ```
 let dlopen = Module.findExportByName(null,"dlopen");
     if (dlopen != null) {
@@ -105,7 +105,7 @@ il2cpp.h create done!
 
 ## 注意！ 开放的so 仅支持64位并且 引擎 版本为2018.3.0f2-2018.4.36f1 其他版本dump均会出错
 
-## 32位 及更多Unity版本 支持 请联系
+## 32位 及更多Unity版本(魔改unity) 支持 请联系
 ```
 QQ:295238641
 邮箱: 295238641@qq.com
