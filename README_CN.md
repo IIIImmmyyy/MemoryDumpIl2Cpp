@@ -1,5 +1,5 @@
 # MemoryDumpIl2Cpp
-### 这是一个 基于Unity引擎的 dump Il2Cpp 的工具， 可以生成 dump.cs il2cpp.h script.json 。 并且不需要global-metadata.dat 。但是需要其他一些信息来辅助分析。（仅支持Android）
+### 这是一个 基于Unity引擎的 dump Il2Cpp 的工具， 可以生成 dump.cs il2cpp.h script.json 。 并且不需要global-metadata.dat 以及解密SO 。但是需要其他一些信息来辅助分析。（仅支持Android）
 
 ### 效果图如下所示 基本与PC Il2Cppdumper 生成的一致；
 ![image](https://github.com/IIIImmmyyy/MemoryDumpIl2Cpp/blob/main/ida.png)
